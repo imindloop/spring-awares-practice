@@ -16,6 +16,14 @@ public class LifeCycleDemoBean implements InitializingBean, DisposableBean, Bean
         System.out.println("## 1. In the constructor of the LifeCycleDemoBean class.");
     }
 
+    public void beforeInit() {
+        System.out.println(" */*/*/*/*/*/*/ From the beforeInit /*/*/*/*/*/*/");
+    }
+
+    public void afterInit() {
+        System.out.println("*/*/*/*/*/*/ From the afterInit /*/*/*/*/*/");
+    }
+
     @Override
     public void setBeanName(String s) {
         System.out.println("## 2. My bean name is: " + s);
